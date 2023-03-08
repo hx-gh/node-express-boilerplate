@@ -5,7 +5,7 @@
     <a href="https://www.linkedin.com/in/henriquegus/">
         <img src="https://img.shields.io/badge/-Gustavo_Henrique-8257E5?style=flat&logo=Linkedin&logoColor=white">
     </a>    
-    <img src="https://img.shields.io/github/repo-size/hx-gh/node-express-boilerplate.git?color=774DD6">
+    <img src="https://img.shields.io/github/repo-size/hx-gh/node-express-boilerplate?color=774DD6">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-8257E5">
 </div>
 <div align="center">
