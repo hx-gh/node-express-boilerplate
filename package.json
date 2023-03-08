@@ -1,0 +1,42 @@
+{
+	"name": "TDD-JEST",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node swagger.js",
+		"dev": "set NODE_ENV=development&& nodemon swagger.js --ignore __tests__ --ignore swagger_output.json",
+		"syncDB": "set NODE_ENV=development&& npx sequelize-cli db:migrate && node -e require('./syncDatabase').syncDatabase() && sequelize db:seed:all",
+		"swagger-autogen": "node swagger.js",
+		"pretest": "set NODE_ENV=test&& sequelize db:migrate && sequelize db:seed:all",
+		"test": "set NODE_ENV=test&& jest --runInBand",
+		"posttest": "set NODE_ENV=TEST&& sequelize db:migrate:undo:all"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"cors": "^2.8.5",
+		"crypto-js": "^4.1.1",
+		"dotenv": "^10.0.0",
+		"express": "^4.18.2",
+		"faker": "^5.5.3",
+		"helmet": "^4.6.0",
+		"jsonwebtoken": "^9.0.0",
+		"mysql2": "^2.3.0",
+		"node-cron": "^3.0.2",
+		"sequelize": "^6.6.5",
+		"swagger-autogen": "^2.21.3",
+		"swagger-ui-express": "^4.4.0",
+		"tedious": "^14.5.0"
+	},
+	"devDependencies": {
+		"factory-girl": "^5.0.4",
+		"jest": "^27.0.6",
+		"nodemon": "^2.0.20",
+		"sequelize-cli": "^6.5.1",
+		"sqlite3": "^5.0.8",
+		"supertest": "^6.3.3"
+	}
+}
